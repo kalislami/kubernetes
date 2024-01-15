@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-w-annotation
+  annotations:
+    description: aplikasi yang dibuat oleh tim product
+    teams: '{["nufail", "kamal", "misyal", "cahya"]}'
+  labels:
+    team: product
+    version: 1.0.0
+    environtment: dev
+spec:
+  containers:
+    - name: nginx
+      image: nginx
+      ports:
+        - containerPort: 80

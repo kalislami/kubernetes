@@ -1,0 +1,2 @@
+# melihat
+kubectl get daemonset

@@ -1,0 +1,13 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: nodejs-job
+spec:
+  completions: 4 #total job yang akan dijalankan
+  parallelism: 2 #berapa jumlah job yang berjalan dalam 1 waktu (untuk mempercepat job)
+  template:
+    spec:
+      restartPolicy: Never
+      containers:
+        - name: nodejs-job
+          image: kalislami/nodejs-job
